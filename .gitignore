@@ -1,0 +1,11 @@
+# Ignore large video file (643MB - exceeds GitHub's 100MB limit)
+video essay.mov
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
