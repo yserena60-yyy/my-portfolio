@@ -138,23 +138,118 @@
             <div class="container">
                 <div class="section-header center">
                     <span class="section-subtitle">01 / Featured Portfolio</span>
-                    <h2 class="section-title">Interactive Builds &amp; Research</h2>
-                    <p class="section-desc">Explore interactive WebGL liquid physics, Serena's playable p5.js generative art with side pop-out panels, Arduino physical computing prototypes, and 3D GLB food models.</p>
+                    <h2 class="section-title">Research &amp; Interactive Builds</h2>
+                    <p class="section-desc">Spatial humanities, heritage metadata systems, and AI-mediated cultural education — built for museums, archives, and digital scholarship.</p>
                 </div>
 
-                <!-- Filter Buttons -->
-                <div class="filter-bar">
-                    <button class="filter-btn active" data-filter="all">All Projects</button>
-                    <button class="filter-btn" data-filter="art">p5.js Playable Art</button>
-                    <button class="filter-btn" data-filter="webgl">WebGL &amp; 3D Models</button>
-                    <button class="filter-btn" data-filter="hardware">Arduino &amp; Physical</button>
-                    <button class="filter-btn" data-filter="dh">Digital Humanities</button>
+                <!-- ══ FEATURED PROJECTS ══ -->
+                <div class="featured-projects-stack">
+
+                    <!-- FEATURED 1: Eurasian Porcelain Network -->
+                    <article class="project-card project-card--featured" data-category="dh" data-project-id="porcelain-network">
+                        <div class="featured-img-col">
+                            <div class="project-img-wrapper p-bg-culture" style="height:100%;">
+                                <div class="culture-visual-art" style="height:100%;">
+                                    <div class="map-grid-overlay"></div>
+                                    <div class="nav-route-line"></div>
+                                    <div class="map-pin pin-1"><i class="fa-solid fa-route"></i></div>
+                                    <div class="map-pin pin-2"><i class="fa-solid fa-map"></i></div>
+                                </div>
+                                <div class="featured-badge"><i class="fa-solid fa-star"></i> Featured Research</div>
+                            </div>
+                        </div>
+                        <div class="featured-content-col">
+                            <div class="project-tags featured-tags">
+                                <span class="tag-highlight">Heritage Metadata Visualization</span>
+                                <span class="tag-highlight">Spatial Network Analysis</span>
+                                <span class="tag-highlight">Archival Uncertainty Modelling</span>
+                            </div>
+                            <h3 class="project-title featured-title">Evidential Cartography of Eurasian Porcelain Networks</h3>
+                            <p class="featured-subtitle">Uncertainty-Encoded Spatial Trade Mapping</p>
+                            <p class="project-desc featured-desc">Architected a spatial network visualization prototype tracing the multi-century circulation of East Asian export porcelain across early modern Eurasian trade corridors. Critically, the system encodes evidentiary uncertainty directly into cartographic variables — line opacity, stroke weight, and timeline position — rather than smoothing archival gaps into false continuity. Normalized and structured legacy metadata from the British Museum and Rijksmuseum collections, translating unstructured archival text into machine-readable spatial records.</p>
+                            <div class="featured-tech-stack">
+                                <span>QGIS</span><span>Mapbox Studio</span><span>Wikidata SPARQL</span><span>Mapbox GL JS</span><span>GeoJSON</span><span>Python</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- FEATURED 2: CultureMap -->
+                    <article class="project-card project-card--featured project-card--featured-alt" data-category="mobile" data-project-id="culture-map">
+                        <div class="featured-content-col">
+                            <div class="project-tags featured-tags">
+                                <span class="tag-highlight">Cultural Heritage HCI</span>
+                                <span class="tag-highlight">Spatial Navigation</span>
+                                <span class="tag-highlight">Community Knowledge Architecture</span>
+                            </div>
+                            <h3 class="project-title featured-title">CultureMap — Heritage Exploration System</h3>
+                            <p class="featured-subtitle">Cross-Platform Gamified Spatial Learning</p>
+                            <p class="project-desc featured-desc">Engineered a cross-platform mobile and web application that transforms the physical encounter with cultural landmarks into a structured, data-rich educational experience. Aggregates heritage metadata in real-time via Wikidata SPARQL and Wikipedia REST API, surfacing temporal site histories and curatorial narratives. Architected a PostgreSQL-backed community annotation layer via Supabase. Deployed OSRM-powered multi-modal turn-by-turn navigation with voice prompts. The gamified passport-stamp acquisition model directly operationalizes informal public education through embodied spatial movement.</p>
+                            <div class="featured-tech-stack">
+                                <span>Flutter</span><span>Mapbox GL</span><span>Supabase</span><span>Wikidata SPARQL</span><span>OSRM API</span><span>SQLite</span>
+                            </div>
+                            <div class="featured-actions">
+                                <a href="https://yserena60-yyy.github.io/culture_map/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+                                    <i class="fa-solid fa-rocket"></i> Explore Live App
+                                </a>
+                                <a href="https://github.com/yserena60-yyy/culture_map" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
+                                    <i class="fa-brands fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                        <div class="featured-img-col">
+                            <div class="project-img-wrapper p-bg-culture" style="height:100%;">
+                                <div class="project-img-real" style="height:100%;">
+                                    <img src="default (4).jpeg" alt="CultureMap Heritage Explorer preview" />
+                                </div>
+                                <div class="featured-badge"><i class="fa-solid fa-star"></i> Featured Research</div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- FEATURED 3: Mythic Arcanum -->
+                    <article class="project-card project-card--featured" data-category="webgl" data-project-id="myth-card">
+                        <div class="featured-img-col">
+                            <div class="project-img-wrapper p-bg-myth" style="height:100%;">
+                                <div class="project-img-real" style="height:100%;">
+                                    <img src="屏幕截图 2026-07-28 151256.png" alt="Mythic Arcanum 3D Irish Myth Cards preview" />
+                                </div>
+                                <div class="featured-badge"><i class="fa-solid fa-star"></i> Featured Research</div>
+                            </div>
+                        </div>
+                        <div class="featured-content-col">
+                            <div class="project-tags featured-tags">
+                                <span class="tag-highlight">Spatial Humanities</span>
+                                <span class="tag-highlight">AI Vision-Based HCI</span>
+                                <span class="tag-highlight">Immersive Heritage Interpretation</span>
+                            </div>
+                            <h3 class="project-title featured-title">Mythic Arcanum — AI-Mediated Spatial Humanities</h3>
+                            <p class="featured-subtitle">Irish Mythological Cycles · Computer Vision Interaction</p>
+                            <p class="project-desc featured-desc">Developed an immersive, browser-deployed spatial humanities application mapping the four epochal cycles of Irish mythology across a real-time Three.js celestial environment. Synthesized touchless AI interaction via Google MediaPipe's computer vision hand-tracking pipeline, enabling gesture-driven navigation without physical peripherals — a design directly applicable to accessible, hands-free museum installation contexts. Deployed IMAX-style cinematic video theater with GSAP camera trajectory animations to deliver structured mythological narrative as a spatially sequenced educational arc.</p>
+                            <div class="featured-tech-stack">
+                                <span>Three.js r160</span><span>WebGL / GLSL</span><span>MediaPipe Hands</span><span>GSAP</span><span>Web Audio API</span>
+                            </div>
+                            <div class="featured-actions">
+                                <a href="https://yserena60-yyy.github.io/myth-card/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+                                    <i class="fa-solid fa-rocket"></i> Launch Arcanum
+                                </a>
+                                <a href="https://github.com/yserena60-yyy/myth-card" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
+                                    <i class="fa-brands fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div><!-- /featured-projects-stack -->
+
+                <!-- ══ SUPPORTING PROJECTS ══ -->
+                <div class="supporting-header">
+                    <span class="section-subtitle" style="margin-top: 64px; display:block;">Also in the Lab</span>
+                    <p class="section-desc" style="margin-top:6px;">Interactive generative art, AI hand-tracking physics, and digital heritage documentary.</p>
                 </div>
 
-                <!-- Projects Grid -->
-                <div class="projects-grid">
+                <div class="projects-grid supporting-grid">
 
-                    <!-- Project 1: p5.js Sketch 1 — Digital Loom (Conway Cross-Stitch) -->
+                    <!-- Digital Loom -->
                     <article class="project-card p5-popout-card" data-category="art" data-project-id="p5-loom">
                         <div class="project-img-wrapper p-bg-loom">
                             <div class="loom-visual-art">
@@ -167,16 +262,15 @@
                         </div>
                         <div class="project-content">
                             <div class="project-tags">
-                                <span>p5.js Original</span> · <span>Game of Life</span> · <span>Cross-Stitch Loom</span> · <span>Audio Sonification</span>
+                                <span>p5.js</span> · <span>Generative Art</span> · <span>Audio Sonification</span>
                             </div>
                             <h3 class="project-title">Digital Loom — Binary Cross-Stitch Life</h3>
-                            <p class="project-desc">Serena's original p5.js artwork translating Conway's Game of Life into a cross-stitch aesthetic! Hover mouse over the card to pop out the live interactive panel right beside it.</p>
+                            <p class="project-desc">Conway's Game of Life rendered as a living cross-stitch weaving simulation with audio-reactive sonification. Hover to pop out live canvas.</p>
                             <div class="project-footer">
-                                <button class="project-link view-details-btn"><i class="fa-solid fa-expand"></i> View Details &amp; Specs ↗</button>
+                                <button class="project-link view-details-btn"><i class="fa-solid fa-expand"></i> View Details ↗</button>
                             </div>
                         </div>
-
-                        <!-- Side Pop-Out Showcase Panel (Pops out RIGHT BESIDE the card) -->
+                        <!-- Side Pop-Out Showcase Panel -->
                         <div class="p5-flyout-panel">
                             <div class="flyout-header">
                                 <div class="flyout-title-group">
@@ -198,7 +292,7 @@
                         </div>
                     </article>
 
-                    <!-- Project 2: p5.js Sketch 2 — Disordered Order (Rain & Lightning) -->
+                    <!-- Disordered Order -->
                     <article class="project-card p5-popout-card" data-category="art" data-project-id="p5-flow">
                         <div class="project-img-wrapper p-bg-disorder">
                             <div class="disorder-visual-art">
@@ -210,16 +304,15 @@
                         </div>
                         <div class="project-content">
                             <div class="project-tags">
-                                <span>p5.js Original</span> · <span>Control vs System</span> · <span>Rain &amp; Lightning</span> · <span>Noise Field</span>
+                                <span>p5.js</span> · <span>Noise Field</span> · <span>System Entropy</span>
                             </div>
                             <h3 class="project-title">Disordered Order — Control vs System</h3>
-                            <p class="project-desc">Serena's original p5.js rain &amp; lightning artwork exploring human control vs system entropy! Hover mouse over the card to pop out the live interactive panel right beside it.</p>
+                            <p class="project-desc">Interactive rain &amp; lightning simulation modelling the tension between human control and systemic entropy. Hover to pop out live canvas.</p>
                             <div class="project-footer">
-                                <button class="project-link view-details-btn"><i class="fa-solid fa-expand"></i> View Details &amp; Specs ↗</button>
+                                <button class="project-link view-details-btn"><i class="fa-solid fa-expand"></i> View Details ↗</button>
                             </div>
                         </div>
-
-                        <!-- Side Pop-Out Showcase Panel (Pops out RIGHT BESIDE the card) -->
+                        <!-- Side Pop-Out Showcase Panel -->
                         <div class="p5-flyout-panel">
                             <div class="flyout-header">
                                 <div class="flyout-title-group">
@@ -237,11 +330,6 @@
                         </div>
                     </article>
 
-                    <!-- Project 3: Wisdom Garden Arduino Prototype & Video Essay -->
-                    <article class="project-card" data-category="hardware" data-project-id="wisdom-garden">
-                        <div class="project-img-wrapper p-bg-wisdom">
-                            <div class="wisdom-visual-art">
-                                <div class="circuit-grid"></div>
                                 <div class="water-drop-icon"><i class="fa-solid fa-droplet"></i></div>
                                 <div class="arduino-chip">ARDUINO<br />SMART SENSING</div>
                                 <span class="badge-video"><i class="fa-solid fa-play"></i> Video Essay Included</span>
