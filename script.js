@@ -270,7 +270,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const loomCard = loomCardContainer ? loomCardContainer.closest('.p5-popout-card') : null;
         if (loomCardContainer) {
             loomSketchRef = new p5((s) => {
-                let grid, cols, rows, resolution = 16, osc, soundEnabled = true; // Sound ON by default
+                let grid, cols, rows, resolution = 16, osc, soundEnabled = false; // Sound OFF by default
 
                 function create2DArray(c, r) {
                     let arr = new Array(c);
@@ -309,14 +309,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     s.frameRate(10);
 
-                    // Auto-start sound on setup (sound ON by default)
-                    try {
-                        if (typeof p5.Oscillator !== 'undefined') {
-                            osc = new p5.Oscillator('sine');
-                            osc.start();
-                            osc.amp(0); // Start silent, will ramp up in draw
-                        }
-                    } catch(e) {}
+                    // Sound is OFF by default — do NOT auto-start oscillator
                 };
 
                 s.toggleSound = () => {
@@ -427,10 +420,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (loomSketchRef) {
                         let isAudioActive = loomSketchRef.toggleSound();
                         if (isAudioActive) {
-                            loomSoundBtn.innerHTML = '<i class="fa-solid fa-volume-high"></i> Sound ON';
+                            loomSoundBtn.innerHTML = '<i class="fa-solid fa-volume-high"></i> SND ON';
                             loomSoundBtn.classList.add('active');
                         } else {
-                            loomSoundBtn.innerHTML = '<i class="fa-solid fa-volume-xmark"></i> Sound OFF';
+                            loomSoundBtn.innerHTML = '<i class="fa-solid fa-volume-xmark"></i> SND OFF';
                             loomSoundBtn.classList.remove('active');
                         }
                     }
@@ -653,10 +646,14 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.view-details-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.stopPropagation();
-            const card = btn.closest('.project-card');
+            // Support new card class names: support-card, feat-item, project-card
+            const card = btn.closest('[data-project-id]') ||
+                         btn.closest('.support-card') ||
+                         btn.closest('.project-card') ||
+                         btn.closest('.feat-item');
             if (card) {
                 const projectId = card.getAttribute('data-project-id');
-                openProjectModal(projectId);
+                if (projectId) openProjectModal(projectId);
             }
         });
     });

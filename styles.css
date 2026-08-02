@@ -415,6 +415,12 @@ img { display:block; max-width:100%; }
   transition:transform .35s var(--ease), opacity .28s ease;
 }
 .p5-popout-card.active .p5-flyout-panel { transform:translateX(0); opacity:1; pointer-events:auto; }
+/* Right-column cards: flip flyout to the LEFT so it doesn't overflow viewport */
+.tier-2 > .p5-popout-card:nth-child(even) .p5-flyout-panel {
+  left:auto; right:100%; margin-left:0; margin-right:2px;
+  transform:translateX(12px);
+}
+.tier-2 > .p5-popout-card:nth-child(even).active .p5-flyout-panel { transform:translateX(0); }
 
 .flyout-header { display:flex; align-items:flex-start; justify-content:space-between; gap:10px; margin-bottom:10px; padding-bottom:10px; border-bottom:1px solid var(--rule); }
 .flyout-title-group { flex:1; }
