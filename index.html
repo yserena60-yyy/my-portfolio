@@ -1,611 +1,527 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Serena Yang — Digital Humanities, Spatial Data & Interactive WebGL Research Portfolio." />
-    <title>Serena Yang — Digital Humanities & Interactive WebGL Portfolio</title>
+    <meta name="description" content="Serena Yang — Digital Humanities, Spatial Heritage Data &amp; AI-Mediated Cultural Education Portfolio. MA Digital Humanities, UCC Cork." />
+    <title>Serena Yang — Digital Humanities &amp; Spatial Heritage Portfolio</title>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@700;800&family=DM+Mono:wght@400;500&display=swap"
-        rel="stylesheet" />
-
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-
-    <!-- p5.js & Sound Library for Direct On-Page Playable Sketches -->
+    <!-- p5.js for live interactive sketches -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js"></script>
 
-    <!-- 3D Model Viewer Library -->
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-    <!-- Styles -->
+    <!-- Swiss Design CSS -->
     <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-    <!-- Ambient Light Background Blobs -->
-    <div class="ambient-light" aria-hidden="true">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-        <div class="blob blob-3"></div>
-    </div>
 
-    <!-- Navigation Header -->
+    <!-- ══════════════════════════════════════
+         NAVIGATION
+    ══════════════════════════════════════ -->
     <header class="navbar" id="navbar">
-        <div class="container nav-container">
-            <a href="#top" class="brand">Serena Yang<span class="brand-dot">✦</span></a>
-            <nav class="nav-links" id="nav-links" aria-label="Main Navigation">
-                <a href="#work" class="nav-link">Projects</a>
-                <a href="#skills" class="nav-link">Capabilities</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </nav>
-            <div class="nav-actions">
-                <a class="btn btn-secondary btn-sm" href="mailto:yserena60@gmail.com">
-                    <i class="fa-regular fa-envelope"></i> Email Me
-                </a>
-                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-            </div>
-        </div>
+        <a href="#hero" class="brand">Serena Yang</a>
+        <nav class="nav-links" id="nav-links" aria-label="Main Navigation">
+            <a href="#work" class="nav-link">Work</a>
+            <a href="#skills" class="nav-link">Capabilities</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+        </button>
     </header>
 
-    <main id="top">
-        <!-- Hero Section -->
+    <main id="hero">
+
+        <!-- ══════════════════════════════════════
+             HERO
+        ══════════════════════════════════════ -->
         <section class="hero-section">
-            <div class="container hero-container">
+            <div class="hero-eyebrow">
+                <span>01 / PORTFOLIO — SERENA YANG</span>
+                <span>CORK, IRELAND · MA DIGITAL HUMANITIES · UCC</span>
+            </div>
+
+            <div class="hero-container">
+                <!-- Left: large display type -->
                 <div class="hero-left">
-                    <div class="badge-pill">
-                        <span class="pulse-dot"></span> MA Digital Humanities · UCC Cork, Ireland
-                    </div>
                     <h1 class="hero-title">
-                        Translating <span class="gradient-text">Culture, Spatial Data</span> & AI into Interactive Stories.
+                        Research &amp;<br>
+                        <em class="gradient-text">Interactive</em><br>
+                        Builds.
                     </h1>
                     <p class="hero-description">
-                        I'm <strong>Serena Yang</strong>, a digital humanities researcher and interactive media developer. 
-                        I build real-time WebGL liquid simulations, AI hand-tracking applications, p5.js generative art, Arduino physical computing prototypes, and 3D GLB models.
+                        <strong>Serena Yang</strong> — spatial humanities researcher and interactive media developer.
+                        Architecting heritage metadata systems, AI-mediated cultural education platforms,
+                        and browser-deployed interactive installations for museums and digital scholarship.
                     </p>
                     <div class="hero-cta">
                         <a class="btn btn-primary" href="#work">
-                            Explore Projects <i class="fa-solid fa-arrow-down"></i>
+                            View Work <i class="fa-solid fa-arrow-down"></i>
                         </a>
                         <a class="btn btn-secondary" href="https://github.com/yserena60-yyy" target="_blank" rel="noopener">
-                            <i class="fa-brands fa-github"></i> GitHub Profile
+                            <i class="fa-brands fa-github"></i> GitHub
                         </a>
                     </div>
                 </div>
 
+                <!-- Right: metadata grid -->
                 <div class="hero-right">
-                    <div class="glass-card hero-card">
-                        <div class="card-header-bar">
-                            <div class="dot red"></div>
-                            <div class="dot yellow"></div>
-                            <div class="dot green"></div>
-                            <span class="card-title-tag">interactive_canvas.js</span>
+                    <div class="hero-aside-grid">
+                        <div class="hero-aside-item">
+                            <span class="hero-aside-label">Discipline</span>
+                            <span class="hero-aside-value">Digital Humanities</span>
                         </div>
-                        <div class="loom-wrapper">
-                            <canvas id="loomCanvas" width="500" height="300"></canvas>
-                            <div class="canvas-hint"><i class="fa-solid fa-hand-pointer"></i> Drag mouse across threads</div>
+                        <div class="hero-aside-item">
+                            <span class="hero-aside-label">Institution</span>
+                            <span class="hero-aside-value">UCC, Cork IE</span>
                         </div>
-                        <div class="preview-metric-grid">
-                            <div class="metric-box">
-                                <div class="metric-num-wrapper">
-                                    <span class="metric-num" data-target="6">0</span><span class="metric-plus">+</span>
-                                </div>
-                                <span class="metric-label">Live Deployments</span>
-                            </div>
-                            <div class="metric-box">
-                                <div class="metric-num-wrapper">
-                                    <span class="metric-num" data-target="100">0</span><span class="metric-plus">%</span>
-                                </div>
-                                <span class="metric-label">Interactive Code</span>
-                            </div>
-                            <div class="metric-box">
-                                <div class="metric-num-wrapper">
-                                    <span class="metric-num" data-target="5">0</span><span class="metric-plus">★</span>
-                                </div>
-                                <span class="metric-label">Research Domains</span>
-                            </div>
+                        <div class="hero-aside-item">
+                            <span class="hero-aside-label">Research Focus</span>
+                            <span class="hero-aside-value">AI in Museums &amp; Heritage</span>
+                        </div>
+                        <div class="hero-aside-item">
+                            <span class="hero-aside-label">Status</span>
+                            <span class="hero-aside-value">MA · 2026 · PhD Candidate</span>
                         </div>
                     </div>
+                    <a class="hero-cta-aside" href="mailto:yserena60@gmail.com">
+                        Get in touch <i class="fa-solid fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- Marquee / Ticker -->
-        <div class="marquee-wrapper" aria-label="Core Skill Keywords">
+        <!-- MARQUEE STRIP -->
+        <div class="marquee-wrapper" aria-label="Core competencies">
             <div class="marquee-content">
-                <span>WEBGL &amp; THREE.JS ✦</span>
-                <span>P5.JS DIGITAL LOOM ✦</span>
-                <span>P5.JS DISORDERED ORDER ✦</span>
-                <span>ARDUINO PHYSICAL COMPUTING ✦</span>
-                <span>MEDIAPIPE AI VISION ✦</span>
-                <span>3D GLB MODELING ✦</span>
-                <span>FLUTTER &amp; GPS NAVIGATION ✦</span>
-                <span>P5.JS DIGITAL LOOM ✦</span>
+                <span>SPATIAL HERITAGE MAPPING ·</span>
+                <span>HERITAGE METADATA SYSTEMS ·</span>
+                <span>AI-MEDIATED CULTURAL EDUCATION ·</span>
+                <span>WEBGL &amp; THREE.JS ·</span>
+                <span>MEDIAPIPE COMPUTER VISION ·</span>
+                <span>P5.JS GENERATIVE ART ·</span>
+                <span>FLUTTER CROSS-PLATFORM ·</span>
+                <span>WIKIDATA SPARQL ·</span>
+                <span>QGIS SPATIAL MAPPING ·</span>
+                <span>SPATIAL HERITAGE MAPPING ·</span>
+                <span>HERITAGE METADATA SYSTEMS ·</span>
+                <span>AI-MEDIATED CULTURAL EDUCATION ·</span>
+                <span>WEBGL &amp; THREE.JS ·</span>
+                <span>MEDIAPIPE COMPUTER VISION ·</span>
+                <span>P5.JS GENERATIVE ART ·</span>
+                <span>FLUTTER CROSS-PLATFORM ·</span>
+                <span>WIKIDATA SPARQL ·</span>
+                <span>QGIS SPATIAL MAPPING ·</span>
             </div>
         </div>
 
-        <!-- Projects Showcase Section -->
+        <!-- ══════════════════════════════════════
+             WORK SECTION
+        ══════════════════════════════════════ -->
         <section id="work" class="projects-section">
-            <div class="container">
-                <div class="section-header center">
-                    <span class="section-subtitle">01 / Featured Portfolio</span>
-                    <h2 class="section-title">Research &amp; Interactive Builds</h2>
-                    <p class="section-desc">Spatial humanities, heritage metadata systems, and AI-mediated cultural education — built for museums, archives, and digital scholarship.</p>
-                </div>
 
-                <!-- ══ FEATURED PROJECTS ══ -->
-                <div class="featured-projects-stack">
-
-                    <!-- FEATURED 1: Eurasian Porcelain Network -->
-                    <article class="project-card project-card--featured" data-category="dh" data-project-id="porcelain-network">
-                        <div class="featured-img-col">
-                            <div class="project-img-wrapper p-bg-culture" style="height:100%;">
-                                <div class="culture-visual-art" style="height:100%;">
-                                    <div class="map-grid-overlay"></div>
-                                    <div class="nav-route-line"></div>
-                                    <div class="map-pin pin-1"><i class="fa-solid fa-route"></i></div>
-                                    <div class="map-pin pin-2"><i class="fa-solid fa-map"></i></div>
-                                </div>
-                                <div class="featured-badge"><i class="fa-solid fa-star"></i> Featured Research</div>
-                            </div>
-                        </div>
-                        <div class="featured-content-col">
-                            <div class="project-tags featured-tags">
-                                <span class="tag-highlight">Heritage Metadata Visualization</span>
-                                <span class="tag-highlight">Spatial Network Analysis</span>
-                                <span class="tag-highlight">Archival Uncertainty Modelling</span>
-                            </div>
-                            <h3 class="project-title featured-title">Evidential Cartography of Eurasian Porcelain Networks</h3>
-                            <p class="featured-subtitle">Uncertainty-Encoded Spatial Trade Mapping</p>
-                            <p class="project-desc featured-desc">Architected a spatial network visualization prototype tracing the multi-century circulation of East Asian export porcelain across early modern Eurasian trade corridors. Critically, the system encodes evidentiary uncertainty directly into cartographic variables — line opacity, stroke weight, and timeline position — rather than smoothing archival gaps into false continuity. Normalized and structured legacy metadata from the British Museum and Rijksmuseum collections, translating unstructured archival text into machine-readable spatial records.</p>
-                            <div class="featured-tech-stack">
-                                <span>QGIS</span><span>Mapbox Studio</span><span>Wikidata SPARQL</span><span>Mapbox GL JS</span><span>GeoJSON</span><span>Python</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- FEATURED 2: CultureMap -->
-                    <article class="project-card project-card--featured project-card--featured-alt" data-category="mobile" data-project-id="culture-map">
-                        <div class="featured-content-col">
-                            <div class="project-tags featured-tags">
-                                <span class="tag-highlight">Cultural Heritage HCI</span>
-                                <span class="tag-highlight">Spatial Navigation</span>
-                                <span class="tag-highlight">Community Knowledge Architecture</span>
-                            </div>
-                            <h3 class="project-title featured-title">CultureMap — Heritage Exploration System</h3>
-                            <p class="featured-subtitle">Cross-Platform Gamified Spatial Learning</p>
-                            <p class="project-desc featured-desc">Engineered a cross-platform mobile and web application that transforms the physical encounter with cultural landmarks into a structured, data-rich educational experience. Aggregates heritage metadata in real-time via Wikidata SPARQL and Wikipedia REST API, surfacing temporal site histories and curatorial narratives. Architected a PostgreSQL-backed community annotation layer via Supabase. Deployed OSRM-powered multi-modal turn-by-turn navigation with voice prompts. The gamified passport-stamp acquisition model directly operationalizes informal public education through embodied spatial movement.</p>
-                            <div class="featured-tech-stack">
-                                <span>Flutter</span><span>Mapbox GL</span><span>Supabase</span><span>Wikidata SPARQL</span><span>OSRM API</span><span>SQLite</span>
-                            </div>
-                            <div class="featured-actions">
-                                <a href="https://yserena60-yyy.github.io/culture_map/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
-                                    <i class="fa-solid fa-rocket"></i> Explore Live App
-                                </a>
-                                <a href="https://github.com/yserena60-yyy/culture_map" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
-                                    <i class="fa-brands fa-github"></i> GitHub
-                                </a>
-                            </div>
-                        </div>
-                        <div class="featured-img-col">
-                            <div class="project-img-wrapper p-bg-culture" style="height:100%;">
-                                <div class="project-img-real" style="height:100%;">
-                                    <img src="default (4).jpeg" alt="CultureMap Heritage Explorer preview" />
-                                </div>
-                                <div class="featured-badge"><i class="fa-solid fa-star"></i> Featured Research</div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- FEATURED 3: Mythic Arcanum -->
-                    <article class="project-card project-card--featured" data-category="webgl" data-project-id="myth-card">
-                        <div class="featured-img-col">
-                            <div class="project-img-wrapper p-bg-myth" style="height:100%;">
-                                <div class="project-img-real" style="height:100%;">
-                                    <img src="屏幕截图 2026-07-28 151256.png" alt="Mythic Arcanum 3D Irish Myth Cards preview" />
-                                </div>
-                                <div class="featured-badge"><i class="fa-solid fa-star"></i> Featured Research</div>
-                            </div>
-                        </div>
-                        <div class="featured-content-col">
-                            <div class="project-tags featured-tags">
-                                <span class="tag-highlight">Spatial Humanities</span>
-                                <span class="tag-highlight">AI Vision-Based HCI</span>
-                                <span class="tag-highlight">Immersive Heritage Interpretation</span>
-                            </div>
-                            <h3 class="project-title featured-title">Mythic Arcanum — AI-Mediated Spatial Humanities</h3>
-                            <p class="featured-subtitle">Irish Mythological Cycles · Computer Vision Interaction</p>
-                            <p class="project-desc featured-desc">Developed an immersive, browser-deployed spatial humanities application mapping the four epochal cycles of Irish mythology across a real-time Three.js celestial environment. Synthesized touchless AI interaction via Google MediaPipe's computer vision hand-tracking pipeline, enabling gesture-driven navigation without physical peripherals — a design directly applicable to accessible, hands-free museum installation contexts. Deployed IMAX-style cinematic video theater with GSAP camera trajectory animations to deliver structured mythological narrative as a spatially sequenced educational arc.</p>
-                            <div class="featured-tech-stack">
-                                <span>Three.js r160</span><span>WebGL / GLSL</span><span>MediaPipe Hands</span><span>GSAP</span><span>Web Audio API</span>
-                            </div>
-                            <div class="featured-actions">
-                                <a href="https://yserena60-yyy.github.io/myth-card/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
-                                    <i class="fa-solid fa-rocket"></i> Launch Arcanum
-                                </a>
-                                <a href="https://github.com/yserena60-yyy/myth-card" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
-                                    <i class="fa-brands fa-github"></i> GitHub
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                </div><!-- /featured-projects-stack -->
-
-                <!-- ══ SUPPORTING PROJECTS ══ -->
-                <div class="supporting-header">
-                    <span class="section-subtitle" style="margin-top: 64px; display:block;">Also in the Lab</span>
-                    <p class="section-desc" style="margin-top:6px;">Interactive generative art, AI hand-tracking physics, and digital heritage documentary.</p>
-                </div>
-
-                <div class="projects-grid supporting-grid">
-
-                    <!-- Digital Loom -->
-                    <article class="project-card p5-popout-card" data-category="art" data-project-id="p5-loom">
-                        <div class="project-img-wrapper p-bg-loom">
-                            <div class="loom-visual-art">
-                                <div class="stitch-grid-pattern"></div>
-                                <div class="cross-stitch-node s1">✕</div>
-                                <div class="cross-stitch-node s2">✕</div>
-                                <div class="cross-stitch-node s3">✕</div>
-                                <span class="badge-playable"><i class="fa-solid fa-gamepad"></i> Hover to Pop Out Panel</span>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <div class="project-tags">
-                                <span>p5.js</span> · <span>Generative Art</span> · <span>Audio Sonification</span>
-                            </div>
-                            <h3 class="project-title">Digital Loom — Binary Cross-Stitch Life</h3>
-                            <p class="project-desc">Conway's Game of Life rendered as a living cross-stitch weaving simulation with audio-reactive sonification. Hover to pop out live canvas.</p>
-                            <div class="project-footer">
-                                <button class="project-link view-details-btn"><i class="fa-solid fa-expand"></i> View Details ↗</button>
-                            </div>
-                        </div>
-                        <!-- Side Pop-Out Showcase Panel -->
-                        <div class="p5-flyout-panel">
-                            <div class="flyout-header">
-                                <div class="flyout-title-group">
-                                    <span class="flyout-tag">p5.js Live Interactive Playground</span>
-                                    <h4 class="flyout-title">Digital Loom — Binary Cross-Stitch Life</h4>
-                                </div>
-                                <div class="flyout-controls">
-                                    <button class="p5-ctrl-btn p5-sound-toggle-btn active" id="p5-loom-sound-btn" title="Toggle Sound On/Off">
-                                        <i class="fa-solid fa-volume-high"></i> Sound ON
-                                    </button>
-                                    <button class="p5-ctrl-btn" id="p5-loom-clear-btn" title="Clear Grid (C)"><i class="fa-solid fa-trash"></i> Clear</button>
-                                    <button class="p5-ctrl-btn" id="p5-loom-rand-btn" title="Randomize (R)"><i class="fa-solid fa-shuffle"></i> Random</button>
-                                </div>
-                            </div>
-                            <div id="p5-loom-card-container" class="flyout-canvas-container"></div>
-                            <div class="flyout-footer-hint">
-                                <i class="fa-solid fa-hand-pointer"></i> Drag mouse to sew stitches | Press 'C' to clear | 'R' to randomize
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Disordered Order -->
-                    <article class="project-card p5-popout-card" data-category="art" data-project-id="p5-flow">
-                        <div class="project-img-wrapper p-bg-disorder">
-                            <div class="disorder-visual-art">
-                                <div class="rain-lines-bg"></div>
-                                <div class="lightning-bolt-glow"><i class="fa-solid fa-bolt"></i></div>
-                                <div class="order-bar-tag">ORDER: 1.00</div>
-                                <span class="badge-playable"><i class="fa-solid fa-gamepad"></i> Hover to Pop Out Panel</span>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <div class="project-tags">
-                                <span>p5.js</span> · <span>Noise Field</span> · <span>System Entropy</span>
-                            </div>
-                            <h3 class="project-title">Disordered Order — Control vs System</h3>
-                            <p class="project-desc">Interactive rain &amp; lightning simulation modelling the tension between human control and systemic entropy. Hover to pop out live canvas.</p>
-                            <div class="project-footer">
-                                <button class="project-link view-details-btn"><i class="fa-solid fa-expand"></i> View Details ↗</button>
-                            </div>
-                        </div>
-                        <!-- Side Pop-Out Showcase Panel -->
-                        <div class="p5-flyout-panel">
-                            <div class="flyout-header">
-                                <div class="flyout-title-group">
-                                    <span class="flyout-tag">p5.js Live Interactive Playground</span>
-                                    <h4 class="flyout-title">Disordered Order — Control vs System</h4>
-                                </div>
-                                <div class="flyout-controls">
-                                    <button class="p5-ctrl-btn" id="p5-flow-reset-btn" title="Reset Order Bar"><i class="fa-solid fa-rotate-right"></i> Reset Order</button>
-                                </div>
-                            </div>
-                            <div id="p5-flow-card-container" class="flyout-canvas-container"></div>
-                            <div class="flyout-footer-hint">
-                                <i class="fa-solid fa-cloud-bolt"></i> Move mouse = control | Click = reset order bar
-                            </div>
-                        </div>
-                    </article>
-
-                                <div class="water-drop-icon"><i class="fa-solid fa-droplet"></i></div>
-                                <div class="arduino-chip">ARDUINO<br />SMART SENSING</div>
-                                <span class="badge-video"><i class="fa-solid fa-play"></i> Video Essay Included</span>
-                            </div>
-                            <div class="project-overlay">
-                                <button class="btn btn-primary btn-sm view-details-btn"><i class="fa-solid fa-circle-play"></i> Watch Video &amp; Architecture</button>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <div class="project-tags">
-                                <span>Arduino Uno</span> · <span>Moisture Sensing</span> · <span>Video Essay</span> · <span>Water Data</span>
-                            </div>
-                            <h3 class="project-title">Wisdom Garden — Smart Arduino Water System</h3>
-                            <p class="project-desc">A closed-loop physical computing prototype &amp; video essay translating soil moisture data into real-time RGB LED feedback and automated servo irrigation.</p>
-                            <div class="project-footer">
-                                <button class="project-link view-details-btn"><i class="fa-solid fa-film"></i> Watch Video Essay ↗</button>
-                                <span class="project-status"><i class="fa-solid fa-microchip"></i> Hardware Prototype</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Project 4: 3D Soap Bubble -->
-                    <article class="project-card" data-category="webgl" data-project-id="soap-bubble">
-                        <div class="project-img-wrapper p-bg-bubble">
-                            <div class="project-img-real">
-                                <img src="屏幕截图 2026-07-28 150937.png" alt="3D Soap Bubble & Interactive Liquid Application preview" />
-                            </div>
-                            <div class="project-overlay">
-                                <a href="https://yserena60-yyy.github.io/3d-soap-bubble/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
-                                    <i class="fa-solid fa-rocket"></i> Launch Live App ↗
-                                </a>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <div class="project-tags">
-                                <span>Three.js</span> · <span>MediaPipe Hands</span> · <span>GPU Wave Shader</span>
-                            </div>
-                            <h3 class="project-title">3D Soap Bubble &amp; Interactive Liquid</h3>
-                            <p class="project-desc">Real-time WebGL GPU fluid wave simulation, rigid crystal refraction, and MediaPipe AI hand-tracking physics to inflate iridescent 3D soap bubbles.</p>
-                            <div class="project-footer">
-                                <a href="https://yserena60-yyy.github.io/3d-soap-bubble/" target="_blank" rel="noopener" class="project-link">
-                                    Launch App <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                </a>
-                                <a href="https://github.com/yserena60-yyy/3d-soap-bubble" target="_blank" rel="noopener" class="project-github-link">
-                                    <i class="fa-brands fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Project 5: Culture Map -->
-                    <article class="project-card" data-category="mobile" data-project-id="culture-map">
-                        <div class="project-img-wrapper p-bg-culture">
-                            <div class="project-img-real">
-                                <img src="default (4).jpeg" alt="Culture Map Heritage Explorer preview" />
-                            </div>
-                            <div class="project-overlay">
-                                <button class="btn btn-primary btn-sm view-details-btn"><i class="fa-solid fa-expand"></i> View Details &amp; README</button>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <div class="project-tags">
-                                <span>Flutter</span> · <span>OSRM Navigation</span> · <span>Wikidata</span> · <span>Supabase</span>
-                            </div>
-                            <h3 class="project-title">Culture Map — Heritage Explorer</h3>
-                            <p class="project-desc">A Flutter spatial humanities guide with turn-by-turn GPS voice navigation (walking/cycling/driving), parchment theme, and Wikidata integration.</p>
-                            <div class="project-footer">
-                                <a href="https://yserena60-yyy.github.io/culture_map/" target="_blank" rel="noopener" class="project-link">
-                                    Explore Map <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                </a>
-                                <a href="https://github.com/yserena60-yyy/culture_map" target="_blank" rel="noopener" class="project-github-link">
-                                    <i class="fa-brands fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Project 6: Mythic Arcanum -->
-                    <article class="project-card" data-category="webgl" data-project-id="myth-card">
-                        <div class="project-img-wrapper p-bg-myth">
-                            <div class="project-img-real">
-                                <img src="屏幕截图 2026-07-28 151256.png" alt="Mythic Arcanum 3D Irish Myth Cards preview" />
-                            </div>
-                            <div class="project-overlay">
-                                <a href="https://yserena60-yyy.github.io/myth-card/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
-                                    <i class="fa-solid fa-rocket"></i> Launch Live App ↗
-                                </a>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <div class="project-tags">
-                                <span>Three.js</span> · <span>MediaPipe Vision</span> · <span>GSAP</span> · <span>Digital Humanities</span>
-                            </div>
-                            <h3 class="project-title">Mythic Arcanum — 3D Irish Myth Cards</h3>
-                            <p class="project-desc">Immersive 3D spatial humanities app mapping 4 epochal cycles of Irish mythology with touchless AI gesture controls, 360° tarot cards &amp; IMAX story theater.</p>
-                            <div class="project-footer">
-                                <a href="https://yserena60-yyy.github.io/myth-card/" target="_blank" rel="noopener" class="project-link">
-                                    Launch Arcanum <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                </a>
-                                <a href="https://github.com/yserena60-yyy/myth-card" target="_blank" rel="noopener" class="project-github-link">
-                                    <i class="fa-brands fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Project 7: Court Ladies (女史箴图) -->
-                    <article class="project-card" data-category="dh" data-project-id="court-ladies">
-                        <div class="project-img-wrapper p-bg-court">
-                            <div class="project-img-real">
-                                <img src="images court ladies.jpeg" alt="Admonitions of the Instructress to Court Ladies 女史箴图 preview" />
-                            </div>
-                            <div class="project-overlay">
-                                <button class="btn btn-primary btn-sm view-details-btn"><i class="fa-solid fa-expand"></i> View Details &amp; Overview</button>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <div class="project-tags">
-                                <span>Digital Humanities</span> · <span>Cultural Memory</span> · <span>British Museum</span>
-                            </div>
-                            <h3 class="project-title">Instructress to Court Ladies（女史箴图）</h3>
-                            <p class="project-desc">Reflective digital documentary &amp; research project exploring the displacement, conservation ethics, and repatriation of China's iconic ancient scroll painting.</p>
-                            <div class="project-footer">
-                                <a href="https://reclaimed-futures-collective.framer.website/projects/court-ladies" target="_blank" rel="noopener" class="project-link">
-                                    View Project Site <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Project 8: 3D Food Model (Golden Orange GLB) -->
-                    <article class="project-card" data-category="webgl" data-project-id="food-hierarchy">
-                        <div class="project-img-wrapper p-bg-food">
-                            <div class="food-visual-art">
-                                <div class="contour-line c1"></div>
-                                <div class="contour-line c2"></div>
-                                <div class="trade-label">3D GLB MODEL</div>
-                                <span class="badge-live-3d"><i class="fa-solid fa-cube"></i> Interactive 3D Model</span>
-                            </div>
-                            <div class="project-overlay">
-                                <button class="btn btn-primary btn-sm view-details-btn"><i class="fa-solid fa-cube"></i> Inspect 3D Model</button>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <div class="project-tags">
-                                <span>3D GLB Model</span> · <span>PBR Texture</span> · <span>Spatial Humanities</span>
-                            </div>
-                            <h3 class="project-title">Golden Orange — 3D Food Artifact</h3>
-                            <p class="project-desc">Interactive 360° 3D GLB model simulation of a Golden Orange food artifact with high-resolution PBR surface skin texturing and orbit lighting.</p>
-                            <div class="project-footer">
-                                <button class="project-link view-details-btn"><i class="fa-solid fa-rotate"></i> Rotate 3D Model ↗</button>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Project 9: Data & Narrative -->
-                    <article class="project-card" data-category="dh" data-project-id="data-narrative">
-                        <div class="project-img-wrapper p-bg-data">
-                            <div class="data-visual-art">
-                                <div class="chart-bar b1"></div>
-                                <div class="chart-bar b2"></div>
-                                <div class="chart-bar b3"></div>
-                                <div class="quote-tag">numbers are not neutral</div>
-                                <span class="badge-tag">Critical Data</span>
-                            </div>
-                            <div class="project-overlay">
-                                <button class="btn btn-primary btn-sm view-details-btn"><i class="fa-solid fa-expand"></i> View Details &amp; README</button>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <div class="project-tags">
-                                <span>Data Visualisation</span> · <span>Python</span> · <span>Reflexive Ethics</span>
-                            </div>
-                            <h3 class="project-title">Reading the Data, Reading the Self</h3>
-                            <p class="project-desc">A critical data narrative examining how operational data metrics intersect with human privacy, cultural representation, and algorithmic bias.</p>
-                            <div class="project-footer">
-                                <span class="project-status"><i class="fa-solid fa-newspaper"></i> Critical Essay</span>
-                            </div>
-                        </div>
-                    </article>
-
-                </div>
+            <div class="section-eyebrow">
+                <span>02 / SELECTED WORK</span>
+                <span>3 FEATURED RESEARCH · 4 SUPPORTING</span>
             </div>
-        </section>
 
-        <!-- Capabilities & Skills -->
-        <section id="skills" class="skills-section">
-            <div class="container">
-                <div class="section-header center">
-                    <span class="section-subtitle">02 / Technical Stack</span>
-                    <h2 class="section-title">Capabilities &amp; Tools</h2>
-                    <p class="section-desc">Combining rigorous operations analytics with cutting-edge WebGL 3D, Serena's playable p5.js art, Arduino physical computing, and spatial mapping.</p>
-                </div>
+            <!-- ─────────────────────────────────
+                 TIER 1: FEATURED RESEARCH PROJECTS
+            ───────────────────────────────── -->
+            <div class="featured-projects-stack">
 
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <div class="skill-icon"><i class="fa-solid fa-palette"></i></div>
-                        <h3>p5.js Playable Generative Art</h3>
-                        <p>Direct on-page interactive p5.js canvas sketches including Conway's Game of Life cross-stitch loom, rain &amp; lightning system entropy, and audio sonification.</p>
-                        <div class="skill-tags">
-                            <span>p5.js Original Sketches</span>
-                            <span>Instance Mode</span>
-                            <span>p5.sound API</span>
-                            <span>Cellular Automata</span>
+                <!-- ▌ FEATURED 01: Eurasian Porcelain Networks -->
+                <article class="project-card--featured" data-category="dh" data-project-id="porcelain-network">
+                    <!-- Image column: CSS cartographic art -->
+                    <div class="featured-img-col">
+                        <div class="map-art" aria-label="Eurasian porcelain trade network visualization">
+                            <svg class="map-route-svg" viewBox="0 0 480 460" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <!-- Trade routes -->
+                                <line x1="86"  y1="175" x2="202" y2="207" stroke="rgba(26,26,26,0.30)" stroke-width="1.2" stroke-dasharray="6 4"/>
+                                <line x1="202" y1="207" x2="312" y2="148" stroke="rgba(26,26,26,0.25)" stroke-width="1"   stroke-dasharray="8 5"/>
+                                <line x1="312" y1="148" x2="384" y2="253" stroke="rgba(26,26,26,0.20)" stroke-width="0.8" stroke-dasharray="5 6"/>
+                                <line x1="86"  y1="175" x2="162" y2="116" stroke="rgba(26,26,26,0.18)" stroke-width="0.8" stroke-dasharray="4 6"/>
+                                <line x1="162" y1="116" x2="312" y2="148" stroke="rgba(26,26,26,0.15)" stroke-width="0.7" stroke-dasharray="6 5"/>
+                                <line x1="202" y1="207" x2="384" y2="253" stroke="rgba(26,26,26,0.12)" stroke-width="0.7" stroke-dasharray="3 7"/>
+                                <!-- Uncertainty band -->
+                                <ellipse cx="200" cy="207" rx="60" ry="40" fill="none" stroke="rgba(26,26,26,0.08)" stroke-width="1" stroke-dasharray="3 5"/>
+                            </svg>
+                            <!-- Network nodes -->
+                            <div class="map-node" style="top:38%;left:18%"></div>
+                            <div class="map-node" style="top:45%;left:42%"></div>
+                            <div class="map-node" style="top:32%;left:65%"></div>
+                            <div class="map-node" style="top:55%;left:80%"></div>
+                            <div class="map-node" style="top:25%;left:34%"></div>
+                            <!-- Labels -->
+                            <div class="map-label" style="top:42%;left:10%">JINGDEZHEN</div>
+                            <div class="map-label" style="top:50%;left:36%">BAGHDAD</div>
+                            <div class="map-label" style="top:28%;left:59%">AMSTERDAM</div>
+                            <div class="map-label" style="top:60%;left:74%">LISBON</div>
+                            <div class="map-label" style="bottom:20px;left:20px;font-size:0.52rem;color:rgba(26,26,26,0.28)">LINE OPACITY = EVIDENTIARY CERTAINTY</div>
+                        </div>
+                        <div class="featured-badge"><i class="fa-solid fa-star"></i> Featured Research</div>
+                    </div>
+
+                    <!-- Text column -->
+                    <div class="featured-content-col">
+                        <span class="feat-index-label">PROJECT 01 / SPATIAL HUMANITIES · HERITAGE METADATA</span>
+                        <div class="featured-tags">
+                            <span class="tag-highlight">Heritage Metadata Visualization</span>
+                            <span class="tag-highlight">Spatial Network Analysis</span>
+                            <span class="tag-highlight">Archival Uncertainty Modelling</span>
+                        </div>
+                        <h2 class="featured-title">Evidential Cartography of Eurasian Porcelain Networks</h2>
+                        <p class="featured-subtitle">Uncertainty-Encoded Spatial Trade Mapping</p>
+                        <p class="featured-desc">Architected a spatial network visualization prototype tracing the multi-century circulation of East Asian export porcelain across early modern Eurasian trade corridors. Critically, the system encodes evidentiary uncertainty directly into cartographic variables — line opacity, stroke weight, and timeline position — rather than smoothing archival gaps into false continuity. Normalized and structured legacy metadata from the British Museum and Rijksmuseum collections, translating unstructured archival text into machine-readable spatial records. Deployed QGIS for topological data modelling and Mapbox Studio for dynamic rendering.</p>
+                        <div class="featured-tech-stack">
+                            <span>QGIS</span>
+                            <span>Mapbox Studio</span>
+                            <span>Wikidata SPARQL</span>
+                            <span>Mapbox GL JS</span>
+                            <span>GeoJSON</span>
+                            <span>Python</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ▌ FEATURED 02: CultureMap — text left, image right -->
+                <article class="project-card--featured project-card--featured-alt" data-category="mobile" data-project-id="culture-map">
+                    <!-- Text column -->
+                    <div class="featured-content-col">
+                        <span class="feat-index-label">PROJECT 02 / CROSS-PLATFORM · HERITAGE HCI</span>
+                        <div class="featured-tags">
+                            <span class="tag-highlight">Cultural Heritage HCI</span>
+                            <span class="tag-highlight">Spatial Navigation</span>
+                            <span class="tag-highlight">Community Knowledge Architecture</span>
+                        </div>
+                        <h2 class="featured-title">CultureMap — Heritage Exploration System</h2>
+                        <p class="featured-subtitle">Cross-Platform Gamified Spatial Learning</p>
+                        <p class="featured-desc">Engineered a cross-platform mobile and web application that transforms the physical encounter with cultural landmarks into a structured, data-rich educational experience. Aggregates heritage metadata in real-time via Wikidata SPARQL and Wikipedia REST API, surfacing temporal site histories and curatorial narratives. Architected a PostgreSQL-backed community annotation layer via Supabase. Deployed OSRM-powered multi-modal turn-by-turn navigation with voice prompts. The gamified passport-stamp acquisition model directly operationalizes informal public education through embodied spatial movement.</p>
+                        <div class="featured-tech-stack">
+                            <span>Flutter</span>
+                            <span>Mapbox GL</span>
+                            <span>Supabase</span>
+                            <span>Wikidata SPARQL</span>
+                            <span>OSRM API</span>
+                            <span>SQLite</span>
+                        </div>
+                        <div class="featured-actions">
+                            <a href="https://yserena60-yyy.github.io/culture_map/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Explore Live App
+                            </a>
+                            <a href="https://github.com/yserena60-yyy/culture_map" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
+                                <i class="fa-brands fa-github"></i> GitHub
+                            </a>
                         </div>
                     </div>
 
-                    <div class="skill-card">
-                        <div class="skill-icon"><i class="fa-solid fa-microchip"></i></div>
-                        <h3>Arduino &amp; Physical Computing</h3>
-                        <p>Designing closed-loop sensing and actuation systems with soil moisture sensors, analog-to-digital data mapping, servo motors, and RGB LED feedback.</p>
-                        <div class="skill-tags">
-                            <span>Arduino Uno</span>
-                            <span>Moisture Sensors</span>
-                            <span>Servo Actuators</span>
-                            <span>Hardware Circuitry</span>
+                    <!-- Image column -->
+                    <div class="featured-img-col">
+                        <div class="project-img-real">
+                            <img src="default (4).jpeg" alt="CultureMap Heritage Explorer — mobile interface preview" />
                         </div>
+                        <div class="featured-badge"><i class="fa-solid fa-star"></i> Featured Research</div>
+                    </div>
+                </article>
+
+                <!-- ▌ FEATURED 03: Mythic Arcanum -->
+                <article class="project-card--featured" data-category="webgl" data-project-id="myth-card">
+                    <!-- Image column -->
+                    <div class="featured-img-col">
+                        <div class="project-img-real">
+                            <img src="屏幕截图 2026-07-28 151256.png" alt="Mythic Arcanum — 3D Irish Mythology Spatial Humanities Platform" />
+                        </div>
+                        <div class="featured-badge"><i class="fa-solid fa-star"></i> Featured Research</div>
                     </div>
 
-                    <div class="skill-card">
-                        <div class="skill-icon"><i class="fa-solid fa-cubes"></i></div>
-                        <h3>WebGL &amp; 3D Graphics</h3>
-                        <p>Real-time Three.js scene rendering, custom GPU GLSL wave shaders, 3D GLB texture modeling, and 3D particle starfields.</p>
-                        <div class="skill-tags">
-                            <span>Three.js</span>
-                            <span>3D GLB Modeling</span>
-                            <span>GLSL Shaders</span>
-                            <span>WebGL FBO</span>
+                    <!-- Text column -->
+                    <div class="featured-content-col">
+                        <span class="feat-index-label">PROJECT 03 / SPATIAL HUMANITIES · AI VISION HCI</span>
+                        <div class="featured-tags">
+                            <span class="tag-highlight">Spatial Humanities</span>
+                            <span class="tag-highlight">AI Vision-Based HCI</span>
+                            <span class="tag-highlight">Immersive Heritage Interpretation</span>
                         </div>
-                    </div>
-
-                    <div class="skill-card">
-                        <div class="skill-icon"><i class="fa-solid fa-hand-pointer"></i></div>
-                        <h3>AI &amp; Computer Vision</h3>
-                        <p>Integrating Google MediaPipe gesture recognition into web applications for touchless 3D interaction and hand tracking.</p>
-                        <div class="skill-tags">
+                        <h2 class="featured-title">Mythic Arcanum — AI-Mediated Spatial Humanities</h2>
+                        <p class="featured-subtitle">Irish Mythological Cycles · Computer Vision Interaction</p>
+                        <p class="featured-desc">Developed an immersive, browser-deployed spatial humanities application mapping the four epochal cycles of Irish mythology across a real-time Three.js celestial environment. Synthesized touchless AI interaction via Google MediaPipe's computer vision hand-tracking pipeline, enabling gesture-driven navigation without physical peripherals — a design directly applicable to accessible, hands-free museum installation contexts. Deployed IMAX-style cinematic video theater with GSAP camera trajectory animations to deliver structured mythological narrative as a spatially sequenced educational arc.</p>
+                        <div class="featured-tech-stack">
+                            <span>Three.js r160</span>
+                            <span>WebGL / GLSL</span>
                             <span>MediaPipe Hands</span>
-                            <span>WebRTC Camera</span>
-                            <span>Touchless UX</span>
+                            <span>GSAP</span>
+                            <span>Web Audio API</span>
                         </div>
+                        <div class="featured-actions">
+                            <a href="https://yserena60-yyy.github.io/myth-card/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Launch Arcanum
+                            </a>
+                            <a href="https://github.com/yserena60-yyy/myth-card" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
+                                <i class="fa-brands fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+            </div><!-- /featured-projects-stack -->
+
+            <!-- ─────────────────────────────────
+                 TIER 2: SUPPORTING PROJECTS 2×2
+            ───────────────────────────────── -->
+            <div class="supporting-header">
+                <span class="section-subtitle">03 / ALSO IN THE LAB</span>
+                <span class="section-desc" style="font-size:0.72rem;text-align:right;">Interactive generative art &amp; digital heritage documentary</span>
+            </div>
+
+            <div class="supporting-grid">
+
+                <!-- Digital Loom -->
+                <article class="project-card p5-popout-card" data-category="art" data-project-id="p5-loom">
+                    <div class="project-img-wrapper p-bg-loom">
+                        <div class="loom-visual-art">
+                            <div class="stitch-grid-pattern"></div>
+                            <div class="cross-stitch-node s1">✕</div>
+                            <div class="cross-stitch-node s2">✕</div>
+                            <div class="cross-stitch-node s3">✕</div>
+                            <span class="badge-playable"><i class="fa-solid fa-gamepad"></i> Hover to Pop Out</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span>p5.js</span> · <span>Generative Art</span> · <span>Cellular Automata</span> · <span>Audio Sonification</span>
+                        </div>
+                        <h3 class="project-title">Digital Loom — Binary Cross-Stitch Life</h3>
+                        <p class="project-desc">Conway's Game of Life rendered as a living cross-stitch weaving simulation with audio-reactive sonification. Hover to pop out the live interactive p5.js canvas.</p>
+                        <div class="project-footer">
+                            <button class="view-details-btn"><i class="fa-solid fa-expand"></i> View Details</button>
+                        </div>
+                    </div>
+                    <!-- Side flyout panel -->
+                    <div class="p5-flyout-panel">
+                        <div class="flyout-header">
+                            <div class="flyout-title-group">
+                                <span class="flyout-tag">p5.js — Live Interactive</span>
+                                <h4 class="flyout-title">Digital Loom — Binary Cross-Stitch Life</h4>
+                            </div>
+                            <div class="flyout-controls">
+                                <button class="p5-ctrl-btn p5-sound-toggle-btn active" id="p5-loom-sound-btn" title="Toggle Sound">
+                                    <i class="fa-solid fa-volume-high"></i> Sound ON
+                                </button>
+                                <button class="p5-ctrl-btn" id="p5-loom-clear-btn"><i class="fa-solid fa-trash"></i> Clear</button>
+                                <button class="p5-ctrl-btn" id="p5-loom-rand-btn"><i class="fa-solid fa-shuffle"></i> Random</button>
+                            </div>
+                        </div>
+                        <div id="p5-loom-card-container" class="flyout-canvas-container"></div>
+                        <div class="flyout-footer-hint">
+                            <i class="fa-solid fa-hand-pointer"></i> Drag to sew &nbsp;|&nbsp; C = clear &nbsp;|&nbsp; R = randomize
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Disordered Order -->
+                <article class="project-card p5-popout-card" data-category="art" data-project-id="p5-flow">
+                    <div class="project-img-wrapper p-bg-disorder">
+                        <div class="disorder-visual-art">
+                            <div class="rain-lines-bg"></div>
+                            <div class="lightning-bolt-glow"><i class="fa-solid fa-bolt"></i></div>
+                            <div class="order-bar-tag">ORDER: 1.00</div>
+                            <span class="badge-playable"><i class="fa-solid fa-gamepad"></i> Hover to Pop Out</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span>p5.js</span> · <span>Noise Field</span> · <span>System Entropy</span> · <span>Control Theory</span>
+                        </div>
+                        <h3 class="project-title">Disordered Order — Control vs System</h3>
+                        <p class="project-desc">Interactive rain &amp; lightning simulation modelling the tension between human control and systemic entropy. Move the mouse to resist; click to reset order. Hover to pop out live canvas.</p>
+                        <div class="project-footer">
+                            <button class="view-details-btn"><i class="fa-solid fa-expand"></i> View Details</button>
+                        </div>
+                    </div>
+                    <!-- Side flyout panel -->
+                    <div class="p5-flyout-panel">
+                        <div class="flyout-header">
+                            <div class="flyout-title-group">
+                                <span class="flyout-tag">p5.js — Live Interactive</span>
+                                <h4 class="flyout-title">Disordered Order — Control vs System</h4>
+                            </div>
+                            <div class="flyout-controls">
+                                <button class="p5-ctrl-btn" id="p5-flow-reset-btn"><i class="fa-solid fa-rotate-right"></i> Reset Order</button>
+                            </div>
+                        </div>
+                        <div id="p5-flow-card-container" class="flyout-canvas-container"></div>
+                        <div class="flyout-footer-hint">
+                            <i class="fa-solid fa-cloud-bolt"></i> Move mouse = control &nbsp;|&nbsp; Click = reset order
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 3D Soap Bubble -->
+                <article class="project-card" data-category="webgl" data-project-id="soap-bubble">
+                    <div class="project-img-wrapper p-bg-bubble">
+                        <div class="project-img-real">
+                            <img src="屏幕截图 2026-07-28 150937.png" alt="3D Soap Bubble &amp; Interactive Liquid — WebGL application" />
+                        </div>
+                        <div class="project-overlay">
+                            <a href="https://yserena60-yyy.github.io/3d-soap-bubble/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Launch Live App
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span>Three.js</span> · <span>MediaPipe Hands</span> · <span>GPU Wave Shader</span>
+                        </div>
+                        <h3 class="project-title">3D Soap Bubble &amp; Interactive Liquid</h3>
+                        <p class="project-desc">Real-time WebGL GPU fluid wave simulation with MediaPipe AI hand-tracking to inflate iridescent 3D soap bubbles. Demonstrates touchless interaction design.</p>
+                        <div class="project-footer">
+                            <a href="https://yserena60-yyy.github.io/3d-soap-bubble/" target="_blank" rel="noopener" class="project-link">
+                                Launch App <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                            <a href="https://github.com/yserena60-yyy/3d-soap-bubble" target="_blank" rel="noopener" class="project-github-link">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Instructress to Court Ladies -->
+                <article class="project-card" data-category="dh" data-project-id="court-ladies">
+                    <div class="project-img-wrapper p-bg-court">
+                        <div class="project-img-real">
+                            <img src="images court ladies.jpeg" alt="Admonitions of the Instructress to Court Ladies — 女史箴图 digital research project" />
+                        </div>
+                        <div class="project-overlay">
+                            <button class="btn btn-primary btn-sm view-details-btn">
+                                <i class="fa-solid fa-expand"></i> View Overview
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span>Digital Humanities</span> · <span>Cultural Memory</span> · <span>British Museum</span>
+                        </div>
+                        <h3 class="project-title">Instructress to Court Ladies（女史箴图）</h3>
+                        <p class="project-desc">Reflective digital documentary exploring the displacement, conservation ethics, and repatriation of China's iconic ancient scroll painting.</p>
+                        <div class="project-footer">
+                            <a href="https://reclaimed-futures-collective.framer.website/projects/court-ladies" target="_blank" rel="noopener" class="project-link">
+                                View Project Site <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+            </div><!-- /supporting-grid -->
+
+        </section><!-- /projects-section -->
+
+        <!-- ══════════════════════════════════════
+             SKILLS / CAPABILITIES
+        ══════════════════════════════════════ -->
+        <section id="skills" class="skills-section">
+            <div class="section-eyebrow">
+                <span>04 / CAPABILITIES &amp; TOOLS</span>
+                <span>TECHNICAL COMPETENCIES</span>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fa-solid fa-map"></i></div>
+                    <h3>Spatial &amp; Heritage Data</h3>
+                    <p>Normalization of legacy archival metadata, topological GIS modelling, and uncertainty-encoded cartographic visualization.</p>
+                    <div class="skill-tags">
+                        <span>QGIS</span>
+                        <span>Mapbox Studio &amp; GL JS</span>
+                        <span>Wikidata SPARQL</span>
+                        <span>Python (data normalization)</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+                    <h3>Cross-Platform Development</h3>
+                    <p>Cross-platform mobile and web applications for cultural heritage exploration with real-time data aggregation and GPS navigation.</p>
+                    <div class="skill-tags">
+                        <span>Flutter</span>
+                        <span>Supabase (PostgreSQL)</span>
+                        <span>OSRM Navigation API</span>
+                        <span>SQLite</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fa-solid fa-hand-pointer"></i></div>
+                    <h3>AI Vision &amp; WebGL</h3>
+                    <p>Browser-deployed spatial humanities platforms with real-time AI hand-tracking and GPU-accelerated 3D rendering and GLSL shaders.</p>
+                    <div class="skill-tags">
+                        <span>Three.js (r160)</span>
+                        <span>WebGL / GLSL Shaders</span>
+                        <span>MediaPipe Hands</span>
+                        <span>GSAP Animation</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fa-solid fa-palette"></i></div>
+                    <h3>Generative Art &amp; HCI</h3>
+                    <p>Algorithmic art installations exploring emergence, entropy, and audience interaction through code-driven generative visual systems.</p>
+                    <div class="skill-tags">
+                        <span>p5.js (Instance Mode)</span>
+                        <span>p5.sound API</span>
+                        <span>Cellular Automata</span>
+                        <span>Noise Fields</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- About Section -->
+        <!-- ══════════════════════════════════════
+             ABOUT
+        ══════════════════════════════════════ -->
         <section id="about" class="about-section">
-            <div class="container about-container">
+            <div class="section-eyebrow">
+                <span>05 / ABOUT SERENA YANG</span>
+                <span>MA DIGITAL HUMANITIES · UCC, CORK, IRELAND</span>
+            </div>
+            <div class="about-container">
                 <div class="about-content">
-                    <span class="section-subtitle">03 / About Serena</span>
-                    <h2 class="section-title">Methodical enough for the database.<br /><em class="gradient-text">Curious enough for the archive.</em></h2>
+                    <span class="section-subtitle">Researcher &amp; Developer</span>
+                    <h2 class="section-title">Methodical<br>enough for the<br><em>database</em>.</h2>
                     <p class="about-text">
-                        Before pursuing my MA in Digital Humanities at University College Cork (UCC), I spent over three years optimizing digital platform operations and analyzing complex datasets.
+                        MA Digital Humanities candidate at University College Cork, supervised by Shawn Day. Research focus: AI-mediated education in museums and cultural heritage institutions.
                     </p>
                     <p class="about-text">
-                        Today, I synthesize data science with interactive web technologies, spatial mapping, and cultural storytelling—creating web applications that make human history and spatial data feel tangible.
+                        Background in <strong>performing arts</strong> (Nanjing Agricultural University) informs a rigorous spatial and audience-psychology perspective on interactive system design. Prior career in digital media operations at <strong>Jiangsu Broadcasting Corporation</strong>.
+                    </p>
+                    <p class="about-text">
+                        Field research across the Louvre, Uffizi, and Van Gogh Museum — systematic observation of spatial curation, exhibition geometry, and audience attention flow.
                     </p>
                     <div class="about-actions">
-                        <a class="btn btn-primary" href="mailto:yserena60@gmail.com?subject=Portfolio%20Enquiry">
-                            Let's Work Together <i class="fa-solid fa-paper-plane"></i>
+                        <a class="btn btn-primary" href="mailto:yserena60@gmail.com?subject=Portfolio Enquiry">
+                            Get in Touch <i class="fa-solid fa-paper-plane"></i>
                         </a>
                     </div>
                 </div>
+                <div class="about-aside-col">
+                    <!-- Deliberately sparse — Swiss negative space -->
+                </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
+        <!-- ══════════════════════════════════════
+             CONTACT
+        ══════════════════════════════════════ -->
         <section id="contact" class="contact-section">
-            <div class="container">
-                <div class="glass-card contact-box">
-                    <div class="contact-header">
-                        <span class="section-subtitle">04 / Get In Touch</span>
-                        <h2 class="section-title">Let's Connect &amp; Collaborate</h2>
-                        <p class="section-desc">Have a digital humanities project, WebGL interactive vision, or spatial research opportunity?</p>
-                    </div>
-
+            <div class="section-eyebrow">
+                <span>06 / GET IN TOUCH</span>
+                <span>COLLABORATION &amp; ENQUIRIES</span>
+            </div>
+            <div class="contact-box">
+                <div class="contact-header">
+                    <span class="section-subtitle">Contact</span>
+                    <h2 class="section-title">Let's Connect &amp; Collaborate</h2>
+                    <p class="section-desc">Digital humanities research, WebGL interactive vision, spatial heritage, or PhD scholarship enquiries.</p>
                     <div class="contact-info-grid">
                         <a href="mailto:yserena60@gmail.com" class="contact-info-item">
                             <i class="fa-regular fa-envelope"></i>
@@ -620,7 +536,8 @@
                             <span>Cork, Ireland</span>
                         </div>
                     </div>
-
+                </div>
+                <div class="contact-form-col">
                     <form class="contact-form" id="contact-form">
                         <div class="form-group">
                             <input type="text" placeholder="Your Name" required />
@@ -636,36 +553,47 @@
                         </button>
                     </form>
                     <div class="form-toast hidden" id="form-toast">
-                        <i class="fa-solid fa-circle-check"></i> Thank you! Your message has been sent successfully.
+                        <i class="fa-solid fa-circle-check"></i> Message received — thank you.
                     </div>
                 </div>
             </div>
         </section>
+
     </main>
 
-    <!-- Footer -->
+    <!-- ══════════════════════════════════════
+         FOOTER
+    ══════════════════════════════════════ -->
     <footer class="footer">
-        <div class="container footer-container">
-            <p>© 2026 Serena Yang · MA Digital Humanities, UCC</p>
+        <div class="footer-container">
+            <p>© 2026 SERENA YANG · MA DIGITAL HUMANITIES, UCC · CORK, IRELAND</p>
             <div class="footer-socials">
-                <a href="https://github.com/yserena60-yyy" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-                <a href="mailto:yserena60@gmail.com" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+                <a href="https://github.com/yserena60-yyy" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-github"></i> GitHub
+                </a>
+                <a href="mailto:yserena60@gmail.com">
+                    <i class="fa-regular fa-envelope"></i> Email
+                </a>
             </div>
         </div>
     </footer>
 
-    <!-- Interactive Project Modal Dialog -->
+    <!-- ══════════════════════════════════════
+         MODAL
+    ══════════════════════════════════════ -->
     <dialog class="modal-dialog" id="projectModal">
-        <div class="modal-content glass-card">
-            <button class="modal-close" id="modalCloseBtn" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+        <div class="modal-content">
+            <button class="modal-close" id="modalCloseBtn" aria-label="Close">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
             <div id="modalBody">
-                <!-- Dynamically injected project detail content -->
+                <!-- Dynamically injected by script.js -->
             </div>
         </div>
     </dialog>
 
-    <!-- JavaScript File -->
+    <!-- JavaScript -->
     <script src="script.js"></script>
-</body>
 
+</body>
 </html>
