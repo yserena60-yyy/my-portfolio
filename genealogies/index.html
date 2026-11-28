@@ -228,6 +228,9 @@ a.flw{color:var(--brass);text-decoration:none;border-bottom:1px dotted var(--bra
   #time{width:90px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+select#ctype.ctsel{appearance:none;-webkit-appearance:none;background:var(--brass) url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2710%27 height=%276%27%3E%3Cpath d=%27M0 0l5 6 5-6z%27 fill=%27%231b1915%27/%3E%3C/svg%3E") no-repeat right 10px center;color:var(--ground);border:1px solid var(--brass);border-radius:3px;height:28px;padding:0 30px 0 10px;font:600 12px var(--ui);cursor:pointer;max-width:260px}
+select#ctype.ctsel:hover{filter:brightness(1.08)}
+select#ctype.ctsel option,select#ctype.ctsel optgroup{background:var(--ground-2);color:var(--ivory)}
 </style>
 
 <div class="app">
@@ -240,7 +243,7 @@ a.flw{color:var(--brass);text-decoration:none;border-bottom:1px dotted var(--bra
   <div class="stage" id="stage">
     <svg id="svg" role="img" aria-label="Genealogy of records"><g id="vp"></g></svg>
     <div class="topbar">
-      <div class="panel follow crumbs"><button class="ibtn" id="allc">All claims</button><span id="crumb"></span><select id="ctype" hidden></select></div>
+      <div class="panel follow crumbs"><button class="ibtn" id="allc" hidden>All claims</button><select id="ctype" class="ctsel" aria-label="Choose which claim to follow"></select><span id="crumb" hidden></span></div>
       <div class="panel lpanel" role="group" aria-label="How sure the links are"><span class="laylab" title="How sure it is that one record drew on the other. The line style shows this too.">Links</span><button class="ibtn lay" data-g="L" data-l="1">Well supported</button><button class="ibtn lay" data-g="L" data-l="2">+ Inferred</button><button class="ibtn lay" data-g="L" data-l="3">+ Tentative</button></div>
       <div class="panel lpanel" role="group" aria-label="How sure the judgements are"><span class="laylab" title="Once two records are linked: how sure the judgement about their claims is (copy, error, new claim). Click a line to see why.">Judgements</span><button class="ibtn lay" data-g="R" data-l="1">Well supported</button><button class="ibtn lay" data-g="R" data-l="2">+ Inferred</button><button class="ibtn lay" data-g="R" data-l="3">+ Tentative</button></div>
       <button class="ibtn panel" id="keyb" aria-expanded="false" title="What the colours, lines and labels mean">? Key</button>
@@ -426,7 +429,7 @@ function buildClaimSel(){const sel=$("ctype"),ty=typesInCase(C());
   $("allc").setAttribute("aria-pressed",!S.ct);
   $("crumb").innerHTML=S.ct?`› following <span style="color:var(--ivory)">${esc(S.ct)}</span> <button class="ibtn" id="ctx" title="Back to all claims">✕</button>`:"";
   if(S.ct)$("ctx").onclick=()=>setCt(null);
-  sel.innerHTML=`<option value="">All claims (whole records)</option><optgroup label="Follow one kind of claim">`+ty.map(k=>`<option value="${k}"${S.ct===k?" selected":""}>${k} (${cnt(k)} records)</option>`).join("")+`</optgroup>`;
+  sel.innerHTML=`<option value="">All claims (whole records)</option><optgroup label="Follow one kind of claim">`+ty.map(k=>`<option value="${k}"${S.ct===k?" selected":""}>${k} (${cnt(k)} record${cnt(k)===1?"":"s"})</option>`).join("")+`</optgroup>`;
   
   const ol=$("olegend");ol.innerHTML=LINEKEY+`<span class="osw"><i style="background:#ebe2cf"></i>first recorded</span><span class="osw"><i style="background:#d9b36a"></i>★ new claim · sourced (names its basis)</span><span class="osw"><i style="background:#9d8fd6"></i>new claim · unsourced (no basis named)</span><span class="osw"><i style="background:#6fa3d8"></i>agrees (same claim, no copying link)</span><span class="osw"><i style="background:#8b8070"></i>copy card</span><span class="osw"><i style="background:#e0603f"></i>copy, certainty changed or mistaken</span>`;
   $("stage").classList.toggle("showo",!!S.ct);if(!S.ct)ol.innerHTML=LINEKEY.replace(`<span class="osw" style="color:var(--faint)">|</span>`,"")}
