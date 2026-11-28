@@ -429,7 +429,7 @@ function buildClaimSel(){const sel=$("ctype"),ty=typesInCase(C());
   $("allc").setAttribute("aria-pressed",!S.ct);
   $("crumb").innerHTML=S.ct?`› following <span style="color:var(--ivory)">${esc(S.ct)}</span> <button class="ibtn" id="ctx" title="Back to all claims">✕</button>`:"";
   if(S.ct)$("ctx").onclick=()=>setCt(null);
-  sel.innerHTML=`<option value="">All claims (whole records)</option><optgroup label="Follow one kind of claim">`+ty.map(k=>`<option value="${k}"${S.ct===k?" selected":""}>${k} (${cnt(k)} record${cnt(k)===1?"":"s"})</option>`).join("")+`</optgroup>`;
+  sel.innerHTML=`<option value="">All claims</option><optgroup label="Follow one kind of claim">`+ty.map(k=>`<option value="${k}"${S.ct===k?" selected":""}>${k}</option>`).join("")+`</optgroup>`;
   
   const ol=$("olegend");ol.innerHTML=LINEKEY+`<span class="osw"><i style="background:#ebe2cf"></i>first recorded</span><span class="osw"><i style="background:#d9b36a"></i>★ new claim · sourced (names its basis)</span><span class="osw"><i style="background:#9d8fd6"></i>new claim · unsourced (no basis named)</span><span class="osw"><i style="background:#6fa3d8"></i>agrees (same claim, no copying link)</span><span class="osw"><i style="background:#8b8070"></i>copy card</span><span class="osw"><i style="background:#e0603f"></i>copy, certainty changed or mistaken</span>`;
   $("stage").classList.toggle("showo",!!S.ct);if(!S.ct)ol.innerHTML=LINEKEY.replace(`<span class="osw" style="color:var(--faint)">|</span>`,"")}
