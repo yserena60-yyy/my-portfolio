@@ -444,7 +444,7 @@ function layout(c){
   const ids=new Set(nodes.map(n=>n.id));
   const edges=c.edges.filter(e=>ids.has(e.from)&&ids.has(e.to));
   const ts=[...new Set(nodes.map(n=>n.t))].sort((a,b)=>a-b);
-  const lanesUsed=[...new Set(nodes.map(n=>n.lane))].sort((a,b)=>a-b);
+  const lmin={};nodes.forEach(n=>{lmin[n.lane]=Math.min(lmin[n.lane]??Infinity,n.t)});const lanesUsed=[...new Set(nodes.map(n=>n.lane))].sort((a,b)=>lmin[a]-lmin[b]||a-b);
   /* columns: time order is kept along every link and within every lane; unrelated records may share a column.
      A record in another lane may start half a column after its source, so chains step down like a staircase. */
   const colOf={},last={};
